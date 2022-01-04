@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create person 
+{% endblock %}
+
+{% block main %}
+
+    <h1>Create a person record</h1>
+
+    <form action="/create_person" method="post">
+        <div class="radio">
+            <p>This person is a:</p>
+            <div>
+                <input autocomplete="off" name="is_member" type="radio" id="member" value=1 checked="checked">
+                <label for="member">Member</label>
+            </div>
+            <div>
+                <input autocomplete="off" name="is_member" type="radio" id="non-member" value=0>
+                <label for="non-member">Non-member</label>   
+            </div>     
+        </div>
+        <div>
+            <label for="first_name">First Name</label>
+            <input autocomplete="off" name="first_name" type="text" required>
+        </div>
+        <div>
+            <label for="middle_name">Middle Name</label>
+            <input autocomplete="off" name="middle_name" type="text">
+        </div>
+        <div>
+            <label for="last_name">Last Name</label>
+            <input autocomplete="off" name="last_name" type="text" required>
+        </div>
+        <div>
+            <label for="email">Email address</label>
+            <input autocomplete="off" name="email" type="email">
+        </div>
+        <div>
+            <label for="username">Username</label>
+            <input autocomplete="off"  name="username" type="text">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input autocomplete="off" name="password" type="password">
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input autocomplete="off" name="phone" type="text">
+        </div>
+        <div>
+            <label for="employer">Employer</label>
+            <input autocomplete="off" name="employer" type="text">
+        </div>
+        <div>
+            <label for="job_title">Job Title</label>
+            <input autocomplete="off" name="job_title" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Create person</button>
+    </form>
+
+{% endblock %}

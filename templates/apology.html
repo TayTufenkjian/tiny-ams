@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+
+    <div id="error">
+        <h1>{{ message }}</h1>
+        <p>Error {{ error }}</p>
+    </div>
+
+    <button onclick="history.back()">Try again</button>
+
+{% endblock %}

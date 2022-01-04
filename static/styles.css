@@ -1,0 +1,163 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+button {
+    background-color: white; 
+    border: 2px solid #0914b9;
+    color: #0914b9; 
+    cursor: pointer;
+    font-size: 16px;
+    margin: 2% 1% 0 0;
+    padding: 2% 4%;
+    text-align: center;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0914b9;
+    color: white;
+  }
+
+button.danger {
+    border: 2px solid #de0707;
+    color: #de0707;
+}
+
+button.danger:hover {
+    background-color: #de0707;
+    color: white;
+  }
+
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+}
+
+#error h1 {
+    color: #de0707;
+}
+
+#error p {
+    font-size: 20px;
+}
+
+footer {
+    font-size: small;
+    margin-top: 10%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+hr {
+    border: 0.5px solid #d8dadd;
+}
+
+input[type=text], input[type=password], input[type=email], form .radio {
+	width: 100%;
+	padding: 1%;
+	margin: 1% 0 4% 0;
+}
+
+/*************** START Nav Styles ***************/
+nav {
+    background: rgb(9,20,185);
+    background: -moz-linear-gradient(0deg, rgba(9,20,185,1) 0%, rgba(25,20,130,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(9,20,185,1) 0%, rgba(25,20,130,1) 100%);
+    background: linear-gradient(0deg, rgba(9,20,185,1) 0%, rgba(25,20,130,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0914b9",endColorstr="#191482",GradientType=1); 
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 2% 3%;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #0b0941;
+}
+
+/******************* END Nav Styles *********************/
+
+
+/******* START Table Styles for Search Results *********/
+.results {
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+.results td, .results th {
+    border: 1px solid #ddd;
+    padding: 1%;
+}
+
+.results th {
+    text-align: left;
+}
+
+.results tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.results tr:hover {
+    background-color: #ddd;
+}
+/******** END Table Styles for Search Results *********/
+
+
+/***************  START Modal Styles ***************/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

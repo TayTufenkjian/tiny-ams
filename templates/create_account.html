@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Account
+{% endblock %}
+
+{% block main %}
+
+    <h1>Create association account</h1>
+
+    <form action="/create_account" method="post">
+        <div>
+            <label for="name" >Name of your association</label>
+            <input autocomplete="off" name="name" type="text" required> 
+        </div>
+        <div>
+            <label for="email">Email address</label>
+            <input autocomplete="off" name="email" type="email" required>
+        </div>
+        <div>
+            <label for="username" >Username</label>
+            <input autocomplete="off"  name="username" type="text" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input autocomplete="off" name="password" type="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Create account</button>
+    </form>
+
+{% endblock %}

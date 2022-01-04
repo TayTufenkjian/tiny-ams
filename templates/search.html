@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search 
+{% endblock %}
+
+{% block main %}
+
+    <h1>Search for people</h1>
+
+    <form action="/search" method="post">
+        <div>
+            <input autocomplete="off" name="search_criteria" type="text" placeholder="Enter a name, email address, employer, or job title">
+        </div>
+        <button class="btn btn-primary" type="submit">Search</button>
+        <button class="btn btn-primary" type="submit">Show me everyone</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+    <p>Total people: {{ person_count }}</p>
+    <p>Members: {{ member_count }}</p>
+    <p>Non-members: {{ nonmember_count }}</p>
+{% endblock %}

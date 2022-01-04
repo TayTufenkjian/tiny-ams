@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        
+        <!-- Custom Site CSS -->
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+
+        <title>Tiny AMS {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+            {% if session.user_id %}
+                {% block header %} 
+                    <h1>{{ association_name }}</h1>
+                {% endblock %}
+            {% endif %}
+            </div>
+        </header>
+        <nav>
+            {% if session.user_id %}
+                <ul class="container">
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/create_person">Create person</a></li>
+                    <li><a href="/logout">Log out</a></li>
+                </ul>
+            {% endif %}
+        </nav>
+        <div class="container">
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+
+            <footer>
+                <p>Tiny AMS is a project by Tay Tufenkjian for CS50X.</p>
+            </footer>
+        </div>
+
+        {% block script %}{% endblock %}
+    </body>
+</html>
