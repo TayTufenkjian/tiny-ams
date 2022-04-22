@@ -1,5 +1,8 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
 }
 
 button {
@@ -35,6 +38,12 @@ button.danger:hover {
     width: 65%;
 }
 
+.container.content {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
 #error h1 {
     color: #de0707;
 }
@@ -60,6 +69,10 @@ input[type=text], input[type=password], input[type=email], form .radio {
 	width: 100%;
 	padding: 1%;
 	margin: 1% 0 4% 0;
+}
+
+main {
+    flex: 1 0 0;
 }
 
 /*************** START Nav Styles ***************/
