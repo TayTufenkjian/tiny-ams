@@ -374,10 +374,13 @@ def login():
         # Query database for username
         query = "SELECT * FROM association WHERE username = :username"
         variables = {"username": request.form.get("username")}
-        association = select_dict(query, variables)[0]
+        try:
+            association = select_dict(query, variables)[0]
+        except:
+            return apology("Invalid username and/or password", 403)
 
-        # Ensure username exists and password is correct
-        if len(association) < 1 or not check_password_hash(association["hash"], request.form.get("password")):
+        # Ensure password is correct
+        if not check_password_hash(association["hash"], request.form.get("password")):
             return apology("Invalid username and/or password", 403)
 
         # Remember which user (association) has logged in
