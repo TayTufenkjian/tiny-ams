@@ -409,11 +409,6 @@ def dashboard():
     # Get the association id of the user who is logged in
     association_id = session["user_id"]
 
-    # Get the association name of the user who is logged in
-    query = "SELECT * FROM association WHERE id = :id"
-    variables = {"id": association_id}
-    association_name = select_dict(query, variables)[0]["association_name"]
-
     # Get the person count, member count, and non-member count for the association
     with sqlite3.connect("tinyams.db") as db:
         cursor = db.cursor()
