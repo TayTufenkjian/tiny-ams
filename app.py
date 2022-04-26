@@ -438,8 +438,9 @@ def search():
 
         # If the user entered some search criteria, execute full text search
         if criteria and criteria.strip():
-            query = "SELECT rowid, * FROM person_index WHERE association_id = :association_id AND ((person_index MATCH :criteria) OR (person_index MATCH :criteria + '*')) ORDER BY rank"
-            variables = {"association_id": session["user_id"], "criteria": criteria}
+            criteria_prefix = f"{criteria}*"
+            query = "SELECT rowid, * FROM person_index WHERE association_id = :association_id AND person_index MATCH :criteria_prefix ORDER BY rank"
+            variables = {"association_id": session["user_id"], "criteria_prefix": criteria_prefix}
             results = select_dict(query, variables)
         
         # Otherwise return all people records (when criteria is blank or only contains spaces)
