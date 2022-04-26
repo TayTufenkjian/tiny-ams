@@ -6,7 +6,21 @@
 
 {% block main %}
     <h1>Dashboard</h1>
-    <p>Total people: {{ person_count }}</p>
-    <p>Members: {{ member_count }}</p>
-    <p>Non-members: {{ nonmember_count }}</p>
+
+    <table class="people-counts">
+        <tbody>
+            <tr>
+                <td>Total people</td>
+                <td>{{ person_count }}</td>
+            </tr>
+            <tr>
+                <td>Members</td>
+                <td>{{ member_count }}</td>
+            </tr>
+            <tr>
+                <td>Non-members</td>
+                <td>{{ nonmember_count }}</td>
+            </tr>
+        </tbody>
+    </table>
 {% endblock %}

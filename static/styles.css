@@ -91,7 +91,6 @@ nav {
     background: -moz-linear-gradient(0deg, rgba(9,20,185,1) 0%, rgba(25,20,130,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(9,20,185,1) 0%, rgba(25,20,130,1) 100%);
     background: linear-gradient(0deg, rgba(9,20,185,1) 0%, rgba(25,20,130,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0914b9",endColorstr="#191482",GradientType=1); 
     font-family: 'Nunito', sans-serif;
     width: 100%;
 }
@@ -106,6 +105,10 @@ nav ul li {
     display: inline;
 }
 
+nav ul li:first-child {
+    margin-left: -3%;
+}
+
 nav ul li a {
     display: inline-block;
     color: white;
@@ -117,8 +120,27 @@ nav ul li a {
 nav a:hover {
     background-color: #0b0941;
 }
-
 /******************* END Nav Styles *********************/
+
+
+/********** START Table Styles for Dashboard ***********/
+.people-counts {
+    border-collapse: collapse;
+    min-width: 200px;
+    width: 30%;
+}
+
+.people-counts td {
+    border: 1px solid #ddd;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.people-counts tr:first-child {
+    font-weight: 700;
+}
+
+/********** END Table Styles for Dashboard ************/
 
 
 /******* START Table Styles for Search Results *********/
