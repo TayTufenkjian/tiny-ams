@@ -37,18 +37,16 @@
     <button class="danger" id="delete">Delete</button>
 
     <!-- Modal for Delete Confirmation-->
-    <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p><b>Are you sure you want to delete this person?</b></p>
-      <p>The person record will be gone. Forever.</p>
-      <a href="/delete_person/{{ id }}"><button class="danger" id="confirm_delete">Yes, delete this person</button></a>
-      <button id="cancel">Cancel</button>
+    <div id="modal-confirm-delete" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><b>Are you sure you want to delete this person?</b></p>
+        <p>The person record will be gone. Forever.</p>
+        <a href="/delete_person/{{ id }}"><button class="danger" id="confirm_delete">Yes, delete this person</button></a>
+        <button id="cancel">Cancel</button>
+        </div>
     </div>
-  
-  </div>
 {% endblock %}
 
 {% block script %}
@@ -56,16 +54,16 @@
         // Adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal 
 
         // Get the modal
-        var modal = document.getElementById("myModal");
+        const modal = document.getElementById("modal-confirm-delete");
         
         // Get the button that opens the modal
-        var btn_delete = document.getElementById("delete");
+        const btn_delete = document.getElementById("delete");
         
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        const span = document.getElementsByClassName("close")[0];
 
         // Get the Cancel button that also closes the modal
-        var btn_cancel = document.getElementById("cancel")[0];
+        const btn_cancel = document.getElementById("cancel");
         
         // When the user clicks the Delete button, open the modal 
         btn_delete.onclick = function() {
