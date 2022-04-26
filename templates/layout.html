@@ -19,7 +19,7 @@
             <div class="container">
             {% if session.user_id %}
                 {% block header %} 
-                    <h1>{{ association_name }}</h1>
+                    <div id="association-name">{{ association_name }}</div>
                 {% endblock %}
             {% endif %}
             </div>
